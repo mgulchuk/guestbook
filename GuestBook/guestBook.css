@@ -1,0 +1,23 @@
+body{
+    background-color: #491217;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+label{
+    color:white;
+    font-size: 1.1em;
+}
+
+.btn{
+    background-color: black;
+    border-color: white;
+}
+
+hr{
+    border-top:2px solid black;
+}
+.errs{
+    color:white;
+    visibility: hidden;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GuestBook</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="img/png" href="images/guests.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="guestBook.css">
+</head>
+<body>
+
+<div class="jumbotron container" >
+    <h1 class="display-4">GuestBook</h1>
+    <p class="lead">To keep all contacts in one place</p>
+    <hr class="my-4">
+</div>
+
+<form id = "guest-book" method="post" action = "addGuest.php" >
+    <div class="container">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="first">
+            <span class="errs" id="errFname">*Please enter a first name</span>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="last">
+            <span class="errs" id="errLname">*Please enter a last name</span>
+        </div>
+    </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="job">Job Title</label>
+                <input type="text" class="form-control" id="job" name = "job" placeholder="job">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="company">Company</label>
+                <input type="text" class="form-control" id="company" name ="company" placeholder="company">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="linkedIn">LinkedIn</label>
+                <input type="text" class="form-control" id="linkedIn" name="linkedIn" placeholder="linkedIn">
+                <span class="errs" id="errLinkedIn">*Please enter a valid linkedIn</span>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="email">Email</label>
+                <input type="text" class="form-control" id="email" name="email" placeholder="email">
+                <span class="errs" id="errEmail">*Please enter a valid email</span>
+            </div>
+        </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <div>
+            <label for="meet">How did we meet?</label>
+            <select id="meet" name="meet" class="form-control">
+                <option selected>Choose...</option>
+                <option>Meetup</option>
+                <option>Job Fair</option>
+                <option>We haven't met yet</option>
+                <option>other</option>
+            </select>
+                <span class="errs" id="errMeet">*Please choose one</span>
+            </div>
+            <div class="form-group">
+                <label for="other">Other (please specify)</label>
+                <textarea class="form-control" id="other" name ="other" rows="3"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck" name="gridCheck" checked>
+            <label class="form-check-label" for="gridCheck">
+                Please add me to your mailing list!
+            </label>
+        </div>
+    </div>
+
+            <div>
+            <label class="form-check-label">Please choose an email format:</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="check" id="html" value="html" checked>
+                <label class="form-check-label" for="html">
+                    HTML
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="check" id="text" value="text">
+                <label class="form-check-label" for="text">
+                    Text
+                </label>
+            </div>
+
+    </div>
+    <hr class="container">
+        <div class="container">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+</form>
+    <div>
+        <a class="btn btn-primary float-right" id="admin" href="login.php">Admin page</a>
+    </div>
+<script src="guestBook.js"></script>
+</body>
+</html>
